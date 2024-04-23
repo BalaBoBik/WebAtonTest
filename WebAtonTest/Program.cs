@@ -10,9 +10,9 @@ builder.Services.AddControllers().AddNewtonsoftJson();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+// Подключать свою Базу Данных тут \|/
 builder.Services.AddDbContext<WebAtonTestDbContext>(opt =>
-    opt.UseNpgsql("Host = localhost; Port = 5432; Database = aton; Username = postgres; Password = 123;")); // Подключать Базу Данных тут 
+    opt.UseNpgsql("Host = localhost; Port = 5432; Database = aton; Username = postgres; Password = 123;")); 
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddCors(options =>
